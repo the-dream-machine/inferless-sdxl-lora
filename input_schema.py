@@ -9,6 +9,12 @@ INPUT_SCHEMA = {
         'datatype': 'STRING',
         'required': True,
         'shape': [1],
-        'example': ["bad art, ugly, deformed, watermark, duplicated"]
+        'example': ["bad art, ugly, deformed, watermark, duplicated, multiple images"]
+    },
+     "color": {
+        'datatype': 'STRING',
+        'required': True,
+        'shape': [1],
+        'example': ["orange, yellow, black, purple"]
     }
 }
