@@ -1,8 +1,9 @@
 # Logo Generator
- - In this tutorial, we will build a Logo Generator Application.
+- Welcome to this hands-on tutorial, where you'll learn to build a serverless Logo Generator application capable of creating unique logos based on text descriptions.
  - We will use Diffusers library and Inferless for model deployment.
 ---
 ## Sample Logos
+Here are some of the sample logo's generated using this application.
 <table>
   <tr>
     <td><img src="https://i.postimg.cc/RSYJXQYn/img1.png?dl=1" alt="Image 1" style="width: 100%;"></td>
