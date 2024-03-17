@@ -29,20 +29,22 @@ class InferlessPythonModel:
         self.pipe.load_lora_weights(lora_id)
 
         # Move model to GPU for faster processing
-        if torch.cuda.is_available():
-            self.pipe.to(device="cuda", dtype=torch.float16)
+        self.pipe.to(device="cuda", dtype=torch.float16)
 
     def infer(self, inputs):
         """
         Generates an image based on the provided prompt.
         """
         prompt = inputs["prompt"]
-
-        # Generate the image using the model with 30 inference steps and full guidance scale
+        negative = inputs["negative"]
+        color = inputs["color"]
+        complete_prompt = f'logo, {prompt} colors ({color})'
+  
         pipeline_output_image = self.pipe(
-            prompt=prompt,
+            prompt=complete_prompt,
+            negative_prompt = negative,
             num_inference_steps=30,
-            guidance_scale=1,
+            guidance_scale=7,
         ).images[0]
 
         # Encode the generated image as a base64 string for convenient transfer
