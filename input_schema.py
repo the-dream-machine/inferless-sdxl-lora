@@ -3,7 +3,7 @@ INPUT_SCHEMA = {
         'datatype': 'STRING',
         'required': True,
         'shape': [1],
-        'example': ["logo,a logo for a coffe shop, coffe"]
+        'example': ["a logo for a coffe shop, coffe"]
     },
     "negative": {
         'datatype': 'STRING',
