@@ -51,20 +51,39 @@ curl --location '<your_inference_url>' \
           --header 'Content-Type: application/json' \
           --header 'Authorization: Bearer <your_api_key>' \
           --data '{
-                    "inputs": [
-                      {
-                        "data": [
-                          "What is PPO?"
-                        ],
-                        "name": "question",
-                        "shape": [
-                          1
-                        ],
-                        "datatype": "BYTES"
-                      }
-                    ]
-                  }
-            '
+  "inputs": [
+              {
+                "data": [
+                   " logo for Car modification"
+                ],
+                "name": "prompt",
+                "shape": [
+                  1
+                ],
+                "datatype": "BYTES"
+              },
+              {
+                "data": [
+                   "bad art, ugly, deformed, watermark, duplicated, multiple images"
+                ],
+                "name": "negative",
+                "shape": [
+                  1
+                ],
+                "datatype": "BYTES"
+              },{
+                "data": [
+                   "orange, yellow, black, purple)"
+                ],
+                "name": "color",
+                "shape": [
+                  1
+                ],
+                "datatype": "BYTES"
+              }
+            ]
+          }
+   '
 ```
 
 ---
@@ -76,10 +95,27 @@ Open the `app.py` file. This contains the main code for inference. It has three 
 **Infer** - This function is where the inference happens. The argument to this function `inputs`, is a dictionary containing all the input parameters. The keys are the same as the name given in inputs. Refer to [input](#input) for more.
 
 ```python
-def infer(self, inputs):
-      question = inputs["question"]
-      result = self.chain.invoke(question)
-      return {"generated_result":result}
+    def infer(self, inputs):
+        """
+        Generates an image based on the provided prompt.
+        """
+        prompt = inputs["prompt"]
+        negative = inputs["negative"]
+        color = inputs["color"]
+        complete_prompt = f'logo, {prompt} colors ({color})'
+  
+        pipeline_output_image = self.pipe(
+            prompt=complete_prompt,
+            negative_prompt = negative,
+            num_inference_steps=30,
+            guidance_scale=7,
+        ).images[0]
+
+        # Encode the generated image as a base64 string for convenient transfer
+        buff = BytesIO()
+        pipeline_output_image.save(buff, format="PNG")
+        img_str = base64.b64encode(buff.getvalue())
+        return {"generated_image_base64": img_str.decode("utf-8")}
 ```
 
 **Finalize** - This function is used to perform any cleanup activity for example you can unload the model from the gpu by setting `self.pipe = None`.
