@@ -36,7 +36,7 @@ class InferlessPythonModel:
         Generates an image based on the provided prompt.
         """
         prompt = inputs["prompt"]
-        negative = inputs["negative"]
+        negative = inputs["negative_prompt"]
         color = inputs["color"]
         complete_prompt = f'logo, {prompt} colors ({color})'
   
