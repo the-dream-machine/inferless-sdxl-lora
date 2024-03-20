@@ -6,12 +6,36 @@
 Here are some of the sample logo's generated using this application.
 <table>
   <tr>
-    <td><img src="https://i.postimg.cc/RSYJXQYn/img1.png?dl=1" alt="Image 1" style="width: 100%;"></td>
-    <td><img src="https://i.postimg.cc/vB4JXdNk/img2.png?dl=1" alt="Image 2" style="width: 100%;"></td>
+    <td>
+      <img src="https://i.postimg.cc/ZnY1qW9H/image-4.png" alt="Image 1" style="width: 100%;">
+      <p style="text-align: center;"><strong>Prompt:</strong> " logo for a cat grooming"</p>
+      <p style="text-align: center;"><strong>Negative prompt:</strong> "bad art, ugly, deformed, watermark, duplicated, multiple images"</p>
+      <p style="text-align: center;"><strong>Color:</strong> "colorful, bright"</p>
+      <p style="text-align: center;"><strong>Inference Time:</strong> 5.30 sec</p>
+    </td>
+    <td>
+      <img src="https://i.postimg.cc/bNMS1Mx0/image-2.png" alt="Image 2" style="width: 100%;">
+      <p style="text-align: center;"><strong>Prompt:</strong> “ logo for spacecraft company”</p>
+      <p style="text-align: center;"><strong>Negative prompt:</strong> "bad art, ugly, deformed, watermark, duplicated, multiple images"</p>
+      <p style="text-align: center;"><strong>Color:</strong> "orange, yellow, black, purple"</p>
+      <p style="text-align: center;"><strong>Inference Time:</strong> 5.29 sec</p>
+    </td>
   </tr>
   <tr>
-    <td><img src="https://i.postimg.cc/hcZxjns0/img4.png?dl=1" alt="Image 2" style="width: 100%;"></td>
-    <td><img src="https://i.postimg.cc/X3FDd2mF/img3.png?dl=1" alt="Image 2" style="width: 100%;"></td>
+    <td>
+      <img src="https://i.postimg.cc/k4fzHWwC/image-6.png" alt="Image 4" style="width: 100%;">
+      <p style="text-align: center;"><strong>Prompt:</strong> " logo for a biker group"</p>
+      <p style="text-align: center;"><strong>Negative prompt:</strong> "bad art, ugly, deformed, watermark, duplicated, multiple images, skull"</p>
+      <p style="text-align: center;"><strong>Color:</strong> "bright, powerful, multi colour"</p>
+      <p style="text-align: center;"><strong>Inference Time:</strong> 5.39 sec</p>
+    </td>
+    <td>
+      <img src="https://i.postimg.cc/cHxkS65c/image-5.png" alt="Image 3" style="width: 100%;">
+      <p style="text-align: center;"><strong>Prompt:</strong> " logo for a dog hospital"</p>
+      <p style="text-align: center;"><strong>Negative prompt:</strong> "bad art, ugly, deformed, watermark, duplicated, multiple images"</p>
+      <p style="text-align: center;"><strong>Color:</strong> "minimalist"</p>
+      <p style="text-align: center;"><strong>Inference Time:</strong> 5.16 sec</p>
+    </td>
   </tr>
 </table>
 
