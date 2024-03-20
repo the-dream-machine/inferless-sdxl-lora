@@ -1,6 +1,8 @@
 # Logo Generator
 - Welcome to this hands-on tutorial, where you'll learn to build a serverless Logo Generator application capable of creating unique logos based on text descriptions.
 - We will leverage the Diffusers library, a powerful Python library for text-to-image and image-to-image generation tasks, and Inferless, a cutting-edge platform for deploying and serving machine learning models efficiently.
+## Architecture
+![Architecture Diagram](https://i.postimg.cc/sg900tVS/Untitled-design-6.png)
 ---
 ## Sample Logos
 Here are some of the sample logo's generated using this application.
