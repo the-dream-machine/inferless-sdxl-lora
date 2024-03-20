@@ -5,7 +5,7 @@ INPUT_SCHEMA = {
         'shape': [1],
         'example': ["a logo for a coffe shop, coffe"]
     },
-    "negative": {
+    "negative_prompt": {
         'datatype': 'STRING',
         'required': True,
         'shape': [1],
