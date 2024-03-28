@@ -5,7 +5,6 @@ build:
     - "libx11-6"
     - "libxext6"
     - "libgl1-mesa-glx"
-    - "ffmpeg"
   python_packages:
     - "accelerate==0.28.0"
     - "diffusers==0.27.0"
