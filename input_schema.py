@@ -1,4 +1,10 @@
 INPUT_SCHEMA = {
+    "model_id":{
+      'datatype': 'STRING',
+      'required': True,
+      'shape': [1],
+      'example': ["stable-diffusion-xl-base-1.0"]
+    },
     "prompt": {
         'datatype': 'STRING',
         'required': True,

@@ -11,11 +11,12 @@ class InferlessPythonModel:
     Class for text-to-image generation using Stable Diffusion with LORA guidance, optimized for inference speed.
     """
 
-    def initialize(self):
+    def initialize(self, inputs):
         """
         Initializes the model, scheduler, and loads model weights.
         """
-        model_id = "stabilityai/stable-diffusion-xl-base-1.0"
+        model_id = inputs["model_id"]
+        # model_id = "stabilityai/stable-diffusion-xl-base-1.0"
         lora_id = "artificialguybr/LogoRedmond-LogoLoraForSDXL-V2"
 
         # Load the diffusion model with FP16 precision for efficiency
